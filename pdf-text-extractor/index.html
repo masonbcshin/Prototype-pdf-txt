@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PDF 파일에서 텍스트를 쉽고 빠르게 추출하세요. 무료이며 모든 처리가 브라우저에서 이루어져 안전합니다.">
+    <title>PDF 텍스트 추출기 - 무료 & 안전한 PDF 텍스트 변환 도구</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- PDF.js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    
+    <style>
+        /* 커스텀 스타일 */
+    </style>
+</head>
+<body class="min-h-screen flex flex-col bg-gray-50">
+    <!-- 헤더 -->
+    <header class="bg-white shadow-sm">
+        <div class="max-w-4xl mx-auto px-4 py-6">
+            <h1 class="text-2xl md:text-3xl font-bold text-gray-800 text-center">
+                PDF 텍스트 추출기
+            </h1>
+            <p class="text-gray-600 text-center mt-2 text-sm md:text-base">
+                무료 & 안전한 PDF 텍스트 변환 도구
+            </p>
+        </div>
+    </header>
+
+    <!-- 메인 콘텐츠 -->
+    <main class="flex-grow max-w-4xl mx-auto px-4 py-8 w-full">
+        <!-- PDF 업로드 영역 -->
+        <section class="mb-8">
+            <!-- 업로드 UI가 여기에 추가될 예정 -->
+        </section>
+
+        <!-- 추출된 텍스트 영역 -->
+        <section class="mb-8">
+            <!-- 결과 UI가 여기에 추가될 예정 -->
+        </section>
+    </main>
+
+    <!-- 푸터 -->
+    <footer class="bg-white border-t">
+        <div class="max-w-4xl mx-auto px-4 py-4">
+            <p class="text-gray-500 text-center text-sm">
+                모든 처리는 브라우저에서 이루어지며, 파일이 서버로 전송되지 않습니다.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // PDF.js 워커 설정
+        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+        
+        // JavaScript 로직이 여기에 추가될 예정
+    </script>
+</body>
+</html>
