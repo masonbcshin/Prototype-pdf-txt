@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="브라우저에서 바로 작동하는 무료 PDF 텍스트 추출 도구입니다. 파일을 서버로 전송하지 않아 안전합니다.">
+    <title>PDF 텍스트 추출기 - 무료 & 안전한 PDF 텍스트 변환 도구</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- PDF.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <script>
+        // PDF.js worker 설정
+        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+    </script>
+    
+    <style>
+        /* 커스텀 스타일이 필요한 경우 여기에 추가 */
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col font-sans text-gray-900">
+    
+    <!-- Header -->
+    <header class="bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+            <h1 class="text-xl md:text-2xl font-bold text-blue-600 flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                PDF 텍스트 추출기
+            </h1>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow container mx-auto px-4 py-8">
+        <div class="max-w-3xl mx-auto bg-white rounded-lg shadow-md p-6">
+            <div class="text-center mb-8">
+                <h2 class="text-2xl font-bold mb-2">PDF를 텍스트로 변환하세요</h2>
+                <p class="text-gray-600">100% 클라이언트 사이드 처리로 데이터가 안전하게 보호됩니다.</p>
+            </div>
+
+            <!-- Placeholder for Upload Area -->
+            <div id="drop-zone" class="border-2 border-dashed border-gray-300 rounded-lg p-10 text-center hover:bg-gray-50 transition-colors cursor-pointer">
+                <div class="flex flex-col items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-gray-400 mb-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+                    </svg>
+                    <p class="text-lg font-medium text-gray-700">PDF 파일을 드래그하거나 클릭하여 업로드</p>
+                    <p class="text-sm text-gray-500 mt-2">지원 형식: PDF</p>
+                </div>
+                <input type="file" id="file-input" class="hidden" accept=".pdf" />
+            </div>
+
+            <!-- Placeholder for Result Area -->
+            <div id="result-area" class="mt-8 hidden">
+                <div class="flex justify-between items-center mb-2">
+                    <h3 class="font-bold text-lg">추출된 텍스트</h3>
+                    <button class="text-sm bg-gray-200 hover:bg-gray-300 px-3 py-1 rounded text-gray-700 transition">복사하기</button>
+                </div>
+                <textarea class="w-full h-64 p-4 border rounded-lg bg-gray-50 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500" readonly></textarea>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 py-6">
+        <div class="container mx-auto px-4 text-center">
+            <p class="mb-2">&copy; 2026 PDF Text Extractor. All rights reserved.</p>
+            <p class="text-xs text-gray-500">이 도구는 서버로 파일을 전송하지 않습니다.</p>
+        </div>
+    </footer>
+
+    <!-- Script Placeholder -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('PDF Text Extractor initialized');
+            // 여기에 로직 추가 예정
+        });
+    </script>
+</body>
+</html>
